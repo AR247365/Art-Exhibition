@@ -7,10 +7,10 @@ export default function Model() {
   const light = useRef()
 
   useFrame((state, delta) => {
-    light.current.position,
-      [state.pointer.x * 12, 0, 8 + state.pointer.y * 4],
-      0.2,
-      delta
+    const x = state.pointer.x * 3
+    const y = state.pointer.y * 3
+
+    light.current.position.set(x, y, 6)
   })
   return (
     <>
@@ -23,20 +23,21 @@ export default function Model() {
       >
         <meshLambertMaterial color="#404044" />
       </mesh>
-      <spotLight
-        angle={0.5}
-        penumbra={0.5}
+      <pointLight
         ref={light}
-        castShadow
-        intensity={10}
-        shadow-mapSize={1024}
-        shadow-bias={-0.001}
+        intensity={250}
+        // angle={0.5}
+        // penumbra={0.5}
+        // castShadow
+        // shadow-mapSize={1024}
+        //shadow-bias={-0.001}
+        position={[3, 2, 1]}
       >
-        <orthographicCamera
+        {/* <orthographicCamera
           attach="shadow-camera"
           args={[-10, 10, -10, 10, 0.1, 50]}
-        />
-      </spotLight>
+        /> */}
+      </pointLight>
     </>
   )
 }

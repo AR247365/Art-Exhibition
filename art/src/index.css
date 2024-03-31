@@ -5,3 +5,6 @@
 .r3f {
   touch-action: none;
 }
+body {
+  background-color: black;
+}

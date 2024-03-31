@@ -1,6 +1,7 @@
 import { Canvas } from "@react-three/fiber"
 import Model from "./Model"
 import { Environment, OrbitControls } from "@react-three/drei"
+import Overlay from "./Overlay"
 
 function App() {
   return (
@@ -17,16 +18,21 @@ function App() {
               position: [0, 1, 6],
             }}
           >
-            <OrbitControls makeDefault />
-            <color args={["black"]} attach="background" />
+            {/* <color args={["black"]} attach="background" /> */}
 
-            <pointLight position={[-3, 3, 3]} intensity={50} />
-            <pointLight position={[3, 3, 3]} intensity={50} />
+            {/* <OrbitControls makeDefault /> */}
+
+            {/* <pointLight position={[-3, 3, 3]} intensity={50} />
+            <pointLight position={[3, 3, 3]} intensity={50} /> */}
+
             {/* <Environment preset="city" /> */}
-            <fog attach="fog" args={["black", 0, 20]} />
+
+            {/* <fog attach="fog" args={["black", 0, 20]} /> */}
+
             <Model />
           </Canvas>
         </div>
+        <Overlay />
       </main>
     </>
   )
