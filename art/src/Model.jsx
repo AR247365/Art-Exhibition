@@ -1,10 +1,58 @@
 import { useGLTF } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber"
-import { useRef } from "react"
+import { useLayoutEffect, useRef } from "react"
+import { useControls } from "leva"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 export default function Model() {
   const { nodes } = useGLTF("./graces-draco2.glb")
   const light = useRef()
+  const ref = useRef()
+  const tl = gsap.timeline()
+
+  //LEVA
+  const { position, rotation } = useControls({
+    position: {
+      value: { x: 0, y: -3, z: 0 },
+      step: 0.01,
+    },
+    rotation: {
+      value: { x: 0, y: -0.1, z: 0 },
+      step: 0.01,
+    },
+  })
+
+  useLayoutEffect(() => {
+    new ScrollTrigger({})
+
+    tl.to(ref.current.rotation, {
+      x: 0,
+      y: -1.5,
+      z: 0,
+      scrollTrigger: {
+        trigger: "#part2",
+        start: "top bottom",
+        end: "top top",
+        scrub: 3,
+        immediateRender: false,
+        markers: false,
+      },
+    })
+    tl.to(ref.current.position, {
+      x: 2.74,
+      y: -2.44,
+      z: 2.47,
+      scrollTrigger: {
+        trigger: "#part2",
+        start: "top bottom",
+        end: "top top",
+        scrub: 3,
+        immediateRender: false,
+        markers: false,
+      },
+    })
+  }, [])
 
   useFrame((state, delta) => {
     const x = state.pointer.x * 3
@@ -15,29 +63,16 @@ export default function Model() {
   return (
     <>
       <mesh
+        ref={ref}
         castShadow
         receiveShadow
         geometry={nodes.Node_3.geometry}
-        position={[0, -3, 0]}
-        rotation={[0, -0.1, 0]}
+        position={[position.x, position.y, position.z]}
+        rotation={[rotation.x, rotation.y, rotation.z]}
       >
         <meshLambertMaterial color="#404044" />
       </mesh>
-      <pointLight
-        ref={light}
-        intensity={250}
-        // angle={0.5}
-        // penumbra={0.5}
-        // castShadow
-        // shadow-mapSize={1024}
-        //shadow-bias={-0.001}
-        position={[3, 2, 1]}
-      >
-        {/* <orthographicCamera
-          attach="shadow-camera"
-          args={[-10, 10, -10, 10, 0.1, 50]}
-        /> */}
-      </pointLight>
+      <pointLight ref={light} intensity={250} position={[3, 2, 1]} />
     </>
   )
 }
