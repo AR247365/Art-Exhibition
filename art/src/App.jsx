@@ -1,6 +1,6 @@
+import Overlay from "./Overlay"
 import { Canvas } from "@react-three/fiber"
 import Model from "./Model"
-import Overlay from "./Overlay"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
 
