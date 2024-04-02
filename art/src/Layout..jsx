@@ -22,7 +22,6 @@ const Layout = () => {
           either the Oceanid Eurynome, or of Eunomia, the goddess of good order
           and lawful conduct.
         </p>
-        <div>03</div>
       </section>
       <br />
       <br />
@@ -33,7 +32,7 @@ const Layout = () => {
         className="h-screen w-1/2 flex flex-col justify-center"
       >
         <h1 className="text-white text-7xl py-8 font-allura underline decoration-1 underline-offset-4">
-          Thalia{" "}
+          Thalia
         </h1>
         <p className="text-white text-4xl font-allura">
           Thalia, in Greek religion, one of the nine Muses, patron of comedy;
@@ -43,7 +42,25 @@ const Layout = () => {
           Apollo, a god related to music and dance. In her hands she carried the
           comic mask and the shepherd's staff.
         </p>
-        <div>03</div>
+      </section>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <section id="part-4" className="h-screen flex flex-row-reverse ">
+        <div className="w-1/2 flex flex-col justify-center">
+          <h1 className="text-white text-7xl py-8 font-allura underline decoration-1 underline-offset-4">
+            Euphre
+          </h1>
+          <p className="text-white text-4xl font-allura">
+            Euphrosyne is a Goddess of Good Cheer, Joy and Mirth. Her name is
+            the female version of a Greek word euphrosynos, which means
+            "merriment". The Greek poet Pindar states that these goddesses were
+            created to fill the world with pleasant moments and good will.
+            Usually the Charites attended the goddess of beauty Aphrodite.
+          </p>
+        </div>
       </section>
     </div>
   )

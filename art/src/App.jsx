@@ -16,7 +16,7 @@ function App() {
             className="r3f"
             camera={{
               fov: 45,
-              near: 2.1,
+              near: 0.1,
               far: 200,
               position: [0, 1, 6],
             }}
