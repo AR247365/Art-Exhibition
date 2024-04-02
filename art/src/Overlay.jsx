@@ -63,7 +63,7 @@ const Overlay = () => {
                 of a group of goddesses of fertility). She is the mother of the
                 Corybantes, celebrants of the Great Mother of the Gods, Cybele,
                 the father being Apollo, a god related to music and dance. In
-                her hands she carried the comic mask and the shepherd’s staff.
+                her hands she carried the comic mask and the shepherd's staff.
               </p>
             )}
             {activeTab === "Tab3" && (

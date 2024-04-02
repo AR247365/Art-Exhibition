@@ -14,11 +14,11 @@ export default function Model() {
   //LEVA
   const { position, rotation } = useControls({
     position: {
-      value: { x: 0, y: -3, z: 0 },
+      value: { x: 2.74, y: -2.44, z: 2.47 },
       step: 0.01,
     },
     rotation: {
-      value: { x: 0, y: -0.1, z: 0 },
+      value: { x: 0, y: -1.5, z: 0 },
       step: 0.01,
     },
   })
@@ -26,28 +26,56 @@ export default function Model() {
   useLayoutEffect(() => {
     new ScrollTrigger({})
 
-    tl.to(ref.current.rotation, {
-      x: 0,
-      y: -1.5,
-      z: 0,
-      scrollTrigger: {
-        trigger: "#part2",
-        start: "top bottom",
-        end: "top top",
-        scrub: 3,
-        immediateRender: false,
-        markers: false,
-      },
-    })
     tl.to(ref.current.position, {
       x: 2.74,
       y: -2.44,
       z: 2.47,
       scrollTrigger: {
-        trigger: "#part2",
+        trigger: "#part-2",
         start: "top bottom",
         end: "top top",
-        scrub: 3,
+        scrub: true,
+        immediateRender: false,
+        markers: false,
+      },
+    })
+    tl.to(ref.current.rotation, {
+      x: 0,
+      y: -1.5,
+      z: 0,
+      scrollTrigger: {
+        trigger: "#part-2",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+        markers: false,
+      },
+    })
+
+    tl.to(ref.current.rotation, {
+      x: 0,
+      y: -0.32,
+      z: 0,
+      scrollTrigger: {
+        trigger: "#part-3",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+        markers: false,
+      },
+    })
+
+    tl.to(ref.current.position, {
+      x: 2.5,
+      y: -2.75,
+      z: 2.3,
+      scrollTrigger: {
+        trigger: "#part-3",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
         immediateRender: false,
         markers: false,
       },
@@ -67,12 +95,14 @@ export default function Model() {
         castShadow
         receiveShadow
         geometry={nodes.Node_3.geometry}
-        position={[position.x, position.y, position.z]}
-        rotation={[rotation.x, rotation.y, rotation.z]}
+        //  position={[position.x, position.y, position.z]}
+        //  rotation={[rotation.x, rotation.y, rotation.z]}
+        position={[0, -3, 0]}
+        rotation={[0, -0.1, 0]}
       >
         <meshLambertMaterial color="#404044" />
       </mesh>
-      <pointLight ref={light} intensity={250} position={[3, 2, 1]} />
+      <pointLight ref={light} intensity={350} position={[3, 2, 1]} />
     </>
   )
 }

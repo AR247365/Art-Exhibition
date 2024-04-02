@@ -1,8 +1,8 @@
-import Overlay from "./Overlay"
 import { Canvas } from "@react-three/fiber"
 import Model from "./Model"
 import gsap from "gsap"
 import ScrollTrigger from "gsap/dist/ScrollTrigger"
+import Layout from "./Layout."
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -24,7 +24,7 @@ function App() {
             <Model />
           </Canvas>
         </div>
-        <Overlay />
+        <Layout />
       </main>
     </>
   )
