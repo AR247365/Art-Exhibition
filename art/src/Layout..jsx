@@ -77,7 +77,7 @@ const Layout = () => {
           almost touching in what many have referred to as an erotically charged
           piece. They stand, leaning slightly inward — perhaps discussing a
           common issue, or simply enjoying their closeness. Their hair-styles
-          are similar, braided atop their heads.
+          are similar, braided atop their heads in a knot.
         </p>
       </section>
     </div>
