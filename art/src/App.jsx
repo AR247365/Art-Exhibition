@@ -5,6 +5,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger"
 import Layout from "./Layout."
 import { Suspense } from "react"
 import { Loader } from "@react-three/drei"
+import Headphone from "./Headphone"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,6 +29,7 @@ function App() {
             </Canvas>
           </Suspense>
         </div>
+        <Headphone />
         <Layout />
       </main>
     </>

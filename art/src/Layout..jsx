@@ -1,5 +1,3 @@
-import React, { useState } from "react"
-
 const Layout = () => {
   return (
     <div className="px-14 py-9 ">
