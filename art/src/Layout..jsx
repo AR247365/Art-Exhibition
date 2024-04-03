@@ -23,13 +23,10 @@ const Layout = () => {
           and lawful conduct.
         </p>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
+
       <section
         id="part-3"
-        className="h-screen w-1/2 flex flex-col justify-center"
+        className="h-screen w-1/2 flex flex-col justify-center py-10"
       >
         <h1 className="text-white text-7xl py-8 font-allura underline decoration-1 underline-offset-4">
           Thalia
@@ -44,11 +41,7 @@ const Layout = () => {
         </p>
       </section>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <section id="part-4" className="h-screen flex flex-row-reverse ">
+      <section id="part-4" className="h-screen flex flex-row-reverse py-10 ">
         <div className="w-1/2 flex flex-col justify-center">
           <h1 className="text-white text-7xl py-8 font-allura underline decoration-1 underline-offset-4">
             Euphre
@@ -61,6 +54,33 @@ const Layout = () => {
             Usually the Charites attended the goddess of beauty Aphrodite.
           </p>
         </div>
+      </section>
+
+      <section id="about" className="h-screen flex flex-col items-center py-10">
+        <h1 className="text-white text-7xl font-allura underline decoration-1 underline-offset-4 py-5">
+          About
+        </h1>
+        <p className="text-white text-4xl font-allura py-5">
+          Antonio Canova's statue 'The Three Graces' is a Neoclassical sculpture
+          of the mythological three Charites. Daughters of Zeus identified on
+          some engravings of the statue as Aglaea Thalia and Euphrosyne who were
+          said to represent 'Elegance', 'Beauty' & 'Mirth'. The Graces presided
+          over banquets and gatherings, to delight the guests of the gods.
+        </p>
+        <p className="text-white text-4xl font-allura py-5">
+          Canova's assistants roughly blocked out the marble, leaving Canova to
+          perform the final carving and shape the stone to highlight the Graces
+          soft flesh. This was a trademark of the artist, and the piece shows a
+          strong allegiance to the Neo-Classical movement in sculpture, of which
+          Canova is the prime exponent.
+        </p>
+        <p className="text-white text-4xl font-allura py-5">
+          The three goddesses are shown nude, huddled together, their heads
+          almost touching in what many have referred to as an erotically charged
+          piece. They stand, leaning slightly inward — perhaps discussing a
+          common issue, or simply enjoying their closeness. Their hair-styles
+          are similar, braided atop their heads.
+        </p>
       </section>
     </div>
   )
