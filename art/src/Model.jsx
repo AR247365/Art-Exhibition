@@ -175,7 +175,7 @@ export default function Model() {
         rotation={[0, -0.1, 0]}
       >
         {/* <meshLambertMaterial color="#404044" /> */}
-        <meshPhongMaterial specular="#404044" shininess={50} />
+        <meshPhongMaterial specular="#404044" shininess={60} />
       </mesh>
 
       <pointLight
