@@ -8,3 +8,15 @@
 body {
   background-color: rgb(0, 0, 0);
 }
+
+::-webkit-scrollbar {
+  color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(24, 24, 24); /* Set the thumb color to gray */
+}
+
+body {
+  cursor: url("./cursor.png"), auto;
+}

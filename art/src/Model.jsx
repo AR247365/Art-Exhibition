@@ -180,7 +180,7 @@ export default function Model() {
 
       <pointLight
         ref={light}
-        intensity={40}
+        intensity={50}
         //power={8000}
         //position={[0, 0, 0]}
       />

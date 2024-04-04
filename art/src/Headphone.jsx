@@ -31,19 +31,19 @@ const Headphone = () => {
 
   return (
     <>
-      {isBlackScreen && (
-        <div
-          className={`fixed top-0 left-0 h-screen w-screen bg-black z-50 flex flex-col justify-center `}
-          onClick={() => setIsBlackScreen(false)}
-        >
-          <h1 className="text-white text-7xl font-allura text-center">
-            Use Headphones for immersive experience.
-          </h1>
-          <h1 className="text-white text-7xl font-allura text-center">
-            Click anywhere to continue.
-          </h1>
-        </div>
-      )}
+      <div
+        className={`fixed top-0 left-0 h-screen w-screen bg-black  flex flex-col justify-center ${
+          isBlackScreen ? " " : "scale-0 duration-1000 ease-in "
+        } `}
+        onClick={() => setIsBlackScreen(false)}
+      >
+        <h1 className="text-white text-7xl font-allura text-center">
+          Use Headphones for immersive experience.
+        </h1>
+        <h1 className="text-white text-7xl font-allura text-center">
+          Click anywhere to continue.
+        </h1>
+      </div>
     </>
   )
 }
