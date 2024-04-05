@@ -41,6 +41,9 @@ const Headphone = () => {
           Use Headphones for immersive experience.
         </h1>
         <h1 className="text-white text-7xl font-allura text-center">
+          Move cursor to see dynamic lighting.
+        </h1>
+        <h1 className="text-white text-7xl font-allura text-center">
           Click anywhere to continue.
         </h1>
       </div>
